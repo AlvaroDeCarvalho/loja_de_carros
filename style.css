@@ -178,3 +178,156 @@ footer .container{
     justify-content: space-between;
     align-items: center;
 }
+
+@media screen and (max-width:767px) {
+    header{
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: #192a56;
+        padding-top: 16px;
+        color: #fff;    
+    }
+    /*chamando o elemento pai (header) para alterar o elemento filho (.container)
+    lembrando que so vai alterar a primeira div que ele encontrar do elemento container,
+    ou seja, se tiver mais de uma div com class= container, o css sera aplicado para a primeira que encontrar */
+    header > .container{
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav {
+        width: 100%;
+        background-color: #575fcf;
+        padding: 16px 0;
+    }
+    nav li{
+        list-style:none;
+        display: inline;
+        margin-right: 16px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        
+    }
+    nav li a {
+        color: #fff;
+        text-decoration:none ;
+    }
+    .menu-hamburger{
+        display: none;
+    }
+    .menu-hamburger span{
+        
+    }
+    .menu-hamburger:hover{
+        cursor: pointer;
+    }
+    .container-flex{
+        display: block
+    }
+    section{
+        
+    }
+    #sobre-a-loja img{
+
+        max-width: 400px;
+    }
+    
+    section h2{
+        margin-bottom:16px;
+    }
+    .lista-veiculos{
+        display: block;
+    }
+    .lista-veiculos li{
+        align-items: center;
+        width: 300px;
+        max-width: 100%;
+        flex-direction: column;
+        display: flex;
+        margin: 10px;
+
+    }
+    .lista-veiculos li img{
+        
+    }
+    .lista-veiculos li h3{
+        
+    
+    }
+    .intes-central{
+       
+    }
+    #carrosel-img{
+        display: none;
+    }
+    button{
+        display: block;
+        padding: 8px ;
+        width: 100%;
+        background-color: rgb(0, 161, 0);
+        color: #fff;
+        font-size: 12px;
+        border: none;
+        font-weight: bold;
+        font-style: italic;
+    }
+    button:hover{
+        background-color: rgb(31, 221, 31);
+        cursor: pointer;
+    }
+    
+    .price{
+        margin:16px 0  ;
+        /*a tag strong é display inline por natureza*/
+        display: block;
+        
+    }
+    
+    .form-campo{
+        
+        margin-bottom: 16px;
+    }
+    
+    .form-campo label{
+        display: block;
+        font-weight: bold;
+    
+    }
+    .form-campo input,
+    .form-campo textarea{
+        width: 100%;
+        padding: 8px;
+    }
+    .form-campo textarea{
+        resize: none;
+        height: 120px;
+    }
+    .form-campo{
+        max-width: 360px;
+    }
+    .form-campo button{
+        width: 120px;
+        margin-top: 8px;
+    }
+    
+    footer{
+        background-color: #1b2390;
+        color: #fff;
+        padding: 16px 0 0 0;
+        
+    }
+    
+    footer li {
+        list-style: none;
+        margin-left: 16px;
+    }
+    footer img{
+        height: 32px;
+    }
+    footer .container{
+        justify-content: space-between;
+        align-items: center;
+    }
+}
