@@ -1,0 +1,180 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/*para todo conteudo que utrapassar o tamanho horizontal do elemento raiz ficar invisive*/
+html{
+    overflow-x: hidden;
+}
+p{
+    font-style: italic;
+    color: darkgray;  
+}
+/*para centralizar os elementos na pagina */
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto ;
+}
+header h1{
+    margin-bottom: 12px;
+}
+
+/*aplicando o postion sticky(resposanvel para nao tirar o header da tela), e colocando o z-index como 1, pois ele vai
+sobre sair os elementos com position:relative "maioria dos carroçeis". escolhemos tambem para o elemento ficar no topo da tela (top=0) 
+e no left absoluto (left=0)*/
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #192a56;
+    padding-top: 16px;
+    color: #fff;    
+}
+/*chamando o elemento pai (header) para alterar o elemento filho (.container)
+lembrando que so vai alterar a primeira div que ele encontrar do elemento container,
+ou seja, se tiver mais de uma div com class= container, o css sera aplicado para a primeira que encontrar */
+header > .container{
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    background-color: #575fcf;
+    padding: 16px 0;
+}
+nav li{
+    list-style:none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+nav li a {
+    color: #fff;
+    text-decoration:none ;
+}
+.menu-hamburger{
+    width: 32px;
+}
+.menu-hamburger span{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+.menu-hamburger:hover{
+    cursor: pointer;
+}
+.container-flex{
+    display: flex;
+}
+section{
+    padding: 48px 0 ;
+}
+#sobre-a-loja img{
+    margin-right: 24px;
+
+    max-width: 400px;
+}
+
+section h2{
+    margin-bottom:16px;
+}
+.lista-veiculos{
+    flex-wrap: wrap;
+}
+.lista-veiculos li{
+    max-width: 30%;
+    list-style:none;
+    margin-bottom: 24px;
+
+}
+.lista-veiculos li img{
+    max-width: 30%;
+    list-style:none;
+    max-width: 100%;
+}
+.lista-veiculos li h3{
+    margin: 16px 0 ;
+
+}
+.intes-central{
+    margin: 0 5%;
+}
+
+button{
+    display: block;
+    padding: 8px 0 ;
+    width: 100%;
+    background-color: rgb(0, 161, 0);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-style: italic;
+}
+button:hover{
+    background-color: rgb(31, 221, 31);
+    cursor: pointer;
+}
+
+.price{
+    margin:16px 0  ;
+    /*a tag strong é display inline por natureza*/
+    display: block;
+    
+}
+
+.form-campo{
+    
+    margin-bottom: 16px;
+}
+
+.form-campo label{
+    display: block;
+    font-weight: bold;
+
+}
+.form-campo input,
+.form-campo textarea{
+    width: 100%;
+    padding: 8px;
+}
+.form-campo textarea{
+    resize: none;
+    height: 120px;
+}
+.form-campo{
+    max-width: 360px;
+}
+.form-campo button{
+    width: 120px;
+    margin-top: 8px;
+}
+
+footer{
+    background-color: #1b2390;
+    color: #fff;
+    padding: 16px 0 0 0;
+    
+}
+
+footer li {
+    list-style: none;
+    margin-left: 16px;
+}
+footer img{
+    height: 32px;
+}
+footer .container{
+    justify-content: space-between;
+    align-items: center;
+}
