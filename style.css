@@ -180,6 +180,9 @@ footer .container{
 }
 
 @media screen and (max-width:767px) {
+    .container{
+        overflow-x: hidden;
+    }
     header{
         position: sticky;
         top: 0;
@@ -189,13 +192,10 @@ footer .container{
         padding-top: 16px;
         color: #fff;    
     }
-    /*chamando o elemento pai (header) para alterar o elemento filho (.container)
-    lembrando que so vai alterar a primeira div que ele encontrar do elemento container,
-    ou seja, se tiver mais de uma div com class= container, o css sera aplicado para a primeira que encontrar */
-    header > .container{
-        justify-content: space-between;
-        align-items: center;
-    }
+    header .container{
+        flex-direction: column;
+     }
+   
     nav {
         width: 100%;
         background-color: #575fcf;
@@ -217,20 +217,16 @@ footer .container{
     .menu-hamburger{
         display: none;
     }
-    .menu-hamburger span{
-        
-    }
     .menu-hamburger:hover{
         cursor: pointer;
     }
     .container-flex{
         display: block
     }
-    section{
-        
+     h2{
+        margin-top: 20px;
     }
     #sobre-a-loja img{
-
         max-width: 400px;
     }
     
@@ -249,16 +245,7 @@ footer .container{
         margin: 10px;
 
     }
-    .lista-veiculos li img{
-        
-    }
-    .lista-veiculos li h3{
-        
     
-    }
-    .intes-central{
-       
-    }
     #carrosel-img{
         display: none;
     }
